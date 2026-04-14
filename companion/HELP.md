@@ -11,7 +11,7 @@ It is recommended to use the available presets to take full advantage of the int
 - Global Snapshot Control
 - Recall View Sets
 - Generic Controller Buttons 1 - 24 Can be mapped inside LiveProfessor
-- Rotary controls 1-4 (Can be mapped to plugins inside LiveProfessor)
+- Rotary controls 1-24 (Can be mapped to plugins inside LiveProfessor)
 - (Also available labels for the rotaries to put above the rotaries)
 - Tempo Tap, with feedback
 - Quick Assign,with feedback

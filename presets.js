@@ -370,8 +370,8 @@ exports.getPresets = function () {
 		],
 	})
 
-	//Presets for 4 rotatries
-	for (i = 1; i < 5; i++) {
+	// Presets for 24 rotaries
+	for (i = 1; i < 25; i++) {
 		presets.push({
 			type: 'button',
 			category: 'Rotaries',

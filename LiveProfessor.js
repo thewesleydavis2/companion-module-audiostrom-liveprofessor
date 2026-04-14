@@ -21,8 +21,8 @@ class LiveProfessorInstance extends InstanceBase {
 			tempoflash: false,
 			ping: false,
 			currentGlobalSnapshot: { id: 0, name: '' },
-			rotaryValues: [0.0, 0.0, 0.0, 0.0],
-			rotaryPush: [false, false, false, false],
+			rotaryValues: Array(24).fill(0.0),
+			rotaryPush: Array(24).fill(false),
 			quickAssignMode: false,
 		}
 		//Set default ports
@@ -112,7 +112,7 @@ class LiveProfessorInstance extends InstanceBase {
 	init_variables() {
 		this.setVariableDefinitions(getVariables())
 
-		this.setVariableValues({
+		const variableValues = {
 			GenericButton1Name: 'Button 1',
 			GenericButton2Name: 'Button 2',
 			GenericButton3Name: 'Button 3',
@@ -134,7 +134,12 @@ class LiveProfessorInstance extends InstanceBase {
 			Rotary3Value: '0.0',
 			Rotary4Name: 'Rotary4',
 			Rotary4Value: '0.0',
-		})
+		}
+		for (let i = 5; i < 25; i++) {
+			variableValues['Rotary' + i + 'Name'] = 'Rotary' + i
+			variableValues['Rotary' + i + 'Value'] = '0.0'
+		}
+		this.setVariableValues(variableValues)
 		let i
 		for (i = 1; i < 100; i++) {
 			this.setVariableValues({ ['GSname' + i]: 'Snap ' + i })
